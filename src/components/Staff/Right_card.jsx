@@ -1,8 +1,10 @@
 import React from 'react'
 import s from "./Staff.module.css";
 
-function Right_card({pers}) {
-  console.log(pers);
+function Right_card({pers, curr_pers_to_del}) {
+  const handleClick = (clicked_person) => {
+    curr_pers_to_del(clicked_person)// для передачи текущего человека в верх по DOM
+  };
     return (
         <div className={s.card}>
             <div className={s.card_title}>Personal info</div>
@@ -20,10 +22,7 @@ function Right_card({pers}) {
               <li className={s.card_bot_info}>Subject: {pers.subject}</li>
               <li className={s.card_bot_info}>number: {pers.number}</li>
               <li className={s.card_bot_info}>year: {pers.year}</li>
-              {/* <li className={s.card_bot_info}>Groups: {pers.name}</li> */}
-              {/* <li className={s.card_bot_info}>Work days:{pers.name}</li> */}
-              {/* <li className={s.card_bot_info}>photo: {pers.file}</li> */}
-              {/* <li className={s.card_bot_info}>Work time: {pers.name}</li> */}
+              <button onClick={() => handleClick(pers)} className={s.del_button}>delete &#10006;</button>
             </div>
           </div>
     )

@@ -100,3 +100,11 @@
     color: white;
     margin-top: 10px;
 }
+.del_button{
+    background-color: transparent;
+    color:brown;
+    float: right;
+}
+.del_button:hover{
+    color: red;
+}
