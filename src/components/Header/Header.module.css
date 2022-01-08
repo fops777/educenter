@@ -1,0 +1,17 @@
+.header{
+    background-image: url('../../media/head.jpg');
+    background-size: 100% 100%;
+    color: white;
+    list-style: none;
+    font-size: 20px;
+    position: fixed;
+    min-width:100vw;
+    z-index: 1;
+}
+.header_flex{
+    padding: 0px 45px;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    display: flex;
+}

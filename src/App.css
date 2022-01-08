@@ -1,0 +1,279 @@
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+nav,footer,header,aside{display: block;}
+html, body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+
+
+/*--------------------------------------------------------------------------*/
+/*Payment*/
+.add_student_button {
+    border: 2px solid lightgreen;
+    background: #37373a;
+    color: white;
+	padding: 12px 20px;
+	font-size: 18px;
+	border-radius: 15px;
+}
+.add_staff_button{
+	border: 2px solid cyan;
+    background: #37373a;
+    color: white;
+	padding: 12px 20px;
+	font-size: 18px;
+	border-radius: 15px;
+}
+.stud_top_flex{
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+	width: 90%;
+	margin-top: 10px;
+	margin-bottom: 15px;
+	align-items: center;
+}
+.stud_mid_flex{
+	margin-top: 50px;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+	width: 90%;
+}
+
+/*--------------------------------------------------------------------------*/
+/*HEADER*/
+
+
+/*---------------------------------------------*/
+/*PAY PAGE CONTENT*/
+
+.y_flex{
+	display: flex;
+	justify-content: space-between;
+}
+
+.buttons{
+	display: flex;
+	margin-left: 70px;
+	justify-content: space-between;
+	width: 480px;
+	margin-top: -10px;
+}
+.button{
+	padding: 10px 20px;
+	width: 200px;
+	background-color: #383838;
+	color: #fff;
+	border: 3px #aeaeae solid;
+	font-size: 30px;
+	box-shadow: 3px 3px 5px -2px black;
+}
+.button:hover{
+	box-shadow: 5px 5px 5px -2px black;
+	background-color: #4d4d4d;
+}
+.data{
+	font-size: 18px;
+	color: #d8d8d8;
+	margin: 20px;
+}
+.low_buttons{
+    display: flex;
+    float: right;
+    margin-right: 10px;
+    margin-top: 20px;
+    background: none;
+    justify-content: space-between;
+}
+
+.low_button1 {
+	padding: 10px 15px;
+	background-color: #555555;
+	color: #fff;
+	width: 130px;
+	font-size: 23px;
+	box-shadow: 1px 4px 5px -2px black;
+}
+.low_button1:hover{
+	background-color: #42474d;
+}
+.low_button2{
+	margin-left: 20px;
+	padding: 10px 15px;
+	background-color: #aeaeae;
+	color: #fff;
+	width: 130px;
+	font-size: 23px;
+	box-shadow: 1px 4px 5px -2px black;
+}
+.low_button2:hover{
+	background-color: #12933a;
+}
+
+
+._FIO_data_flex{
+	display: flex;
+}
+.FIO{
+	margin-top: 10px;
+}
+.data_FIO{
+	color: #e0e0e0;
+	font-size: 17px;
+	margin-top: 15px;
+}
+
+::-webkit-scrollbar{
+	width: 10px;
+}
+::-webkit-scrollbar-track{
+	background-color: black;
+	border: 1px #777777 solid;
+}
+
+::-webkit-scrollbar-thumb{
+	background-color: grey;
+	border-radius: 50px;
+}
+.header_flex{
+	display: flex;
+	justify-content: space-between;
+	max-width: 1150px;
+	padding: 0 20px 0px 60px;
+	align-items: center;
+}
+.header_flex_pay{
+	display: flex;
+	justify-content: space-between;
+	max-width: 570px;
+	margin-left: 60px;
+	margin-top: 20px;
+}
+.left_flex{
+    padding: 40px 0 0 0;
+	display: flex;
+	align-items: center;
+}
+.searching_div{
+	padding: 8px 15px;
+	background-color: #292929;
+	color: #fff;
+	width: 500px;
+	margin-right: 10px;
+	border-radius: 2px;
+	font-size: 18px;
+	border: 1px #aeaeae solid;
+}
+.searching_div:focus{
+	outline: none;
+	box-shadow: #37c4e2 0px 0px 5px 1px;
+}
+.search_btn{
+	background-color: #292929;
+	border-radius: 2px;
+	color: #fff;
+	font-size: 18px;
+	padding: 8px 15px;
+	border: 1px solid #aeaeae;
+}
+.search_btn:hover{
+	background-color: #494949;
+	box-shadow: 1px 1px 5px -1px black;
+}
+
+.groups_data_photo{
+	height: 125px;
+	width: 100px;
+	background-color: #d0d0d0;
+	margin: 20px;
+}
+
+.groups_flex{
+	display: flex;
+	justify-content: space-between;
+}
+
+.projects_div{
+}
+
+.project{
+	font-family: 'Great Vibes', cursive;
+	margin: 20px 0px;
+	padding: 7px 13px;
+	padding-top: 10px;
+	width: 200px;
+	background-color: #4e4e4e;
+	color: #fff;
+	font-size: 18px;
+	box-shadow: 0px 0px 7px -2px black;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.project:hover{
+	transition: 0.1s;
+	background-color: #404040;
+}
+
+.strelki{
+	float: right;
+	padding-top: 2px;
+}
+
+.viezj_spisok{
+	margin-top: 25px;
+	margin-left: 20px;
+	border-left: 1px #92ecff  solid;
+	max-width: 185px;
+}
+
+.viezj_odin_uchit{
+    color: white;
+	padding: 5px 0px;
+	margin: 0px 20px;
+	text-decoration: none;
+}
+
+.viezj_odin_uchit:hover{
+	text-decoration: underline;
+	border-radius: 10px;
+}
+.flex_1 {
+    color: white;
+}
+
+
+
+.all_page{
+	background-image: url('./media/bg.jpg');
+	background-size: cover;
+}
+.main_content{
+	padding-left: 130px;
+	margin-top: 50px;
+	padding-right: 20px;
+	padding-bottom: 10px;
+	color: grey;
+	min-height: 90.5vh;
+	font-size: 18px;
+	width: 100%;
+}
+a{
+	text-decoration: none;
+}

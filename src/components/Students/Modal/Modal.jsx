@@ -1,0 +1,86 @@
+import React from "react";
+import "./Modal.css";
+
+function Modal({ active, setActive, create }) {
+  const [name, setName] = React.useState("");
+  const [surName, setSurName] = React.useState("");
+  const [thirdName, setThirdName] = React.useState("");
+  const [subject, setSubject] = React.useState("");
+  const [number, setNumber] = React.useState("");
+  const [year, setYear] = React.useState("");
+
+  const addNewPost = (e) => {
+    e.preventDefault();
+    const newPost = {
+      id: Date.now(),
+      name,
+      surName,
+      thirdName,
+      subject,
+      number,
+      year,
+    };
+    create(newPost);
+    setName('')
+    setSurName('')
+    setThirdName('')
+    setNumber('')
+    setSubject('')
+    setYear('')
+    setActive(false);
+  };
+  return (
+    <div
+      className={active ? "modal active" : "modal"}
+      onClick={() => setActive(false)}
+    >
+      <div className="modal_content" onClick={(e) => e.stopPropagation()}>
+        <input
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          type="text"
+          placeholder="name"
+        />
+        <br />
+        <input
+          value={surName}
+          onChange={(e) => setSurName(e.target.value)}
+          type="text"
+          placeholder="surName"
+        />
+        <br />
+        <input
+          value={thirdName}
+          onChange={(e) => setThirdName(e.target.value)}
+          type="text"
+          placeholder="thirdName"
+        />
+        <br />
+        <input
+          value={subject}
+          onChange={(e) => setSubject(e.target.value)}
+          type="text"
+          placeholder="subject"
+        />
+        <br />
+        <input
+          value={number}
+          onChange={(e) => setNumber(e.target.value)}
+          type="text"
+          placeholder="number"
+        />
+        <br />
+        <input
+          value={year}
+          onChange={(e) => setYear(e.target.value)}
+          type="text"
+          placeholder="year"
+        />
+        <br />
+        <button onClick={addNewPost}>add</button>
+      </div>
+    </div>
+  );
+}
+
+export default Modal;

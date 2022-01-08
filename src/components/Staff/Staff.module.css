@@ -1,0 +1,102 @@
+.stud_mid_flex{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 50px;
+}
+.title{
+    align-items: center;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+}
+.schedule_block{
+    overflow-y: scroll;
+    padding-top: 15px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-top: 20px;    
+    border-radius: 15px;
+    height: 430px;
+    min-width: 300px;
+}
+.schedule_block h1{
+    margin-left: 70px;
+}
+.one_item_flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    cursor: pointer;
+}
+.one_item_flex:hover{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.name{
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    opacity: 0.9;
+}
+.subject{
+    font-size: 25px;
+    color: cyan;
+    margin: 10px 0px;
+}
+.number{
+    font-size: 17px;
+    color: white;
+    opacity: 0.7;
+}
+.birth{
+    font-size: 16px;
+    margin: 5px 0px;
+}
+.photo{
+    margin-left: 40px;
+    width: 75px;
+    height: 100px;
+    background-color: grey;
+}
+
+
+.card{
+    padding: 25px 20px;
+    background-color: #3e3f43;
+    border-radius: 20px;
+    border: 2px solid grey;
+    margin-top: 30px;
+    width: 300px;
+}
+.card_title{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 0px 0px 20px 70px;
+    color: white;
+}
+.top_card_flex{
+    display: flex;
+    align-items: center;
+}
+.card_photo_div{
+    width: 150px;
+    height: 200px;
+    background-color: #d0d0d0;
+    margin-right: 20px;
+}
+.card_photo{
+    width: 150px;
+    height: 200px;
+}
+.card_name{
+    font-size: 21px;
+    color: white;
+    font-weight: 500;
+    margin: 0px 0px;
+}
+.card_bot_info{
+    font-size: 19px;
+    color: white;
+    margin-top: 10px;
+}
