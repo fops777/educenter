@@ -1,8 +1,31 @@
+.card{
+  padding: 25px 20px;
+  background-color: #3e3f43;
+  border-radius: 20px;
+  border: 2px solid grey;
+  margin-top: 30px;
+  width: 250px;
+}
 .card_title {
   font-size: 25px;
   font-weight: 500;
-  margin: 0px 0px 20px 70px;
+  align-items: center;
   color: white;
+  text-align: center;
+}
+.card_title_right{
+  margin-bottom: 15px;
+  font-size: 25px;
+  font-weight: 500;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+.card_name{
+   font-size: 18px;
+  color: white;
+  font-weight: 500;
+  opacity: 0.9;
 }
 .students_list_block {
   overflow-y: scroll;
@@ -12,7 +35,7 @@
   margin-top: 20px;
   border-radius: 15px;
   height: 430px;
-  min-width: 300px;
+  width: 400px;
 }
 .studList_flex {
   display: flex;
@@ -48,4 +71,90 @@
   width: 75px;
   height: 100px;
   background-color: grey;
+}
+
+.name {
+  font-size: 18px;
+  color: white;
+  font-weight: 500;
+  opacity: 0.9;
+}
+.subject {
+  font-size: 25px;
+  color: cyan;
+  margin: 10px 0px;
+}
+.number {
+  font-size: 17px;
+  color: white;
+  opacity: 0.7;
+}
+.birth {
+  font-size: 16px;
+  margin: 5px 0px;
+}
+.photo {
+  margin-left: 40px;
+  width: 75px;
+  height: 100px;
+  background-color: grey;
+}
+
+.card {
+  padding: 25px 20px;
+  background-color: #3e3f43;
+  border-radius: 20px;
+  border: 2px solid grey;
+  margin-top: 30px;
+  width: 300px;
+  height: 350px
+}
+
+.top_card_flex {
+  display: flex;
+  align-items: center;
+}
+.card_photo_div {
+  width: 150px;
+  height: 200px;
+  background-color: #d0d0d0;
+  margin-right: 20px;
+}
+.card_photo {
+  width: 150px;
+  height: 200px;
+}
+.card_name {
+  font-size: 21px;
+  color: white;
+  font-weight: 500;
+  margin: 0px 0px;
+}
+.card_bot_info {
+  font-size: 19px;
+  color: white;
+  margin-top: 10px;
+}
+.del_button {
+  background-color: transparent;
+  color: brown;
+  float: right;
+}
+.del_button:hover {
+  color: red;
+}
+.searching_div{
+  padding: 8px 15px;
+	background-color: #292929;
+	color: #fff;
+	width: 400px;
+	border-radius: 2px;
+	font-size: 18px;
+	border: 1px #aeaeae solid;
+	margin-top: 15px;
+	margin-bottom: 18px;
+}
+.searching_div:focus{
+	outline: none;
+	box-shadow: #37c4e2 0px 0px 5px 1px;
 }

@@ -1,10 +1,9 @@
 import React from "react";
-import Search from "../Search";
-import PersonalData from "../PersonalData";
 import TeacherList from "./DropDown/TeacherList";
 import Modal from "./Modal/Modal";
 import StudentsList from "./StudentsList";
-import Right_card from "../Staff/Right_card";
+import Right_card_stud from "./Right_card_stud";
+import s from "./Students.module.css";
 
 const Students = () => {
   const [modalActive, setModalActive] = React.useState(false); //показ/скрыть окно
@@ -27,6 +26,7 @@ const Students = () => {
       year: "1998",
     },
   ]);
+  const [input, setInput] = React.useState("");
 
   const current_person_func = (curr_pers) => {
     setOne_pers(curr_pers);
@@ -34,12 +34,21 @@ const Students = () => {
   const createPost = (newPost) => {
     setTodos([...todos, newPost]);
   };
+  const del_pers = (todo) => {
+    setTodos(todos.filter((el) => el.id !== todo.id));
+  };
 
   return (
     <div className="students_content">
       <div className="stud_top_flex">
-        <Search />
-        <button
+        <input //Search input
+          placeholder="поиск"
+          className={s.searching_div}
+          onChange={(e) => {
+            setInput(e.target.value);
+          }}
+        />
+        <button //Добавить ученика+
           onClick={() => {
             setModalActive(true);
           }}
@@ -47,7 +56,7 @@ const Students = () => {
         >
           Добавить ученика +
         </button>
-        <Modal
+        <Modal //Modal
           active={modalActive}
           setActive={setModalActive}
           create={createPost}
@@ -55,11 +64,15 @@ const Students = () => {
       </div>
       <div className="stud_mid_flex">
         <TeacherList />
-        <StudentsList todos={todos} current_person={current_person_func} />
-        <div className="personal_data">
-          <Right_card pers={one_pers}/>
-          {/* <PersonalData /> */}
-        </div>
+        <StudentsList
+          todos={todos}
+          current_person={current_person_func}
+          input={input}
+        />
+        <Right_card_stud 
+          pers={one_pers} 
+          curr_pers_to_del={del_pers} 
+        />
       </div>
     </div>
   );

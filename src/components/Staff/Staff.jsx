@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Search from "../Search";
 import Modal from "./Modal/Modal";
 import Right_card from "./Right_card";
 import s from "./Staff.module.css";
@@ -48,16 +47,7 @@ const Staff = () => {
 
   return (
     <div className="body">
-      <div className="stud_top_flex">
-        <Search />
-        <button
-          onClick={() => {
-            setModalActive(true);
-          }}
-          className="add_staff_button"
-        >
-          Добавить сотрудника +
-        </button>
+      <div className="stud_top_fle">        
         <Modal
           active={modalActive}
           setActive={setModalActive}
@@ -66,20 +56,13 @@ const Staff = () => {
       </div>
       <div className={s.stud_mid_flex}>
         <div className={s.left_stud_part}>
-          <h2 className={s.title}>Весь персонал</h2>
-          <div className={s.schedule_block}>
-            {todos.length ? (
               <Left_StaffList
                 todos={todos}
                 current_person={current_person_func}
               />
-            ) : (
-              <h1>No staff!</h1>
-            )}
-          </div>
         </div>
         <div className={s.right_stud_part}>
-          <Right_card pers={one_pers} curr_pers_to_del={del_pers} />
+          <Right_card setModalActive={setModalActive} pers={one_pers} curr_pers_to_del={del_pers} />
         </div>
       </div>
     </div>

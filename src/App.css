@@ -37,6 +37,9 @@ button::-moz-focus-inner {padding:0;border:0;}
     color: white;
 	padding: 12px 20px;
 	font-size: 18px;
+	width: 250px;
+	/* margin-left: 94px; */
+	/* margin-top: 15px; */
 	border-radius: 15px;
 }
 .stud_top_flex{
@@ -44,8 +47,8 @@ button::-moz-focus-inner {padding:0;border:0;}
 	justify-content: space-between;
 	margin: 0 auto;
 	width: 90%;
-	margin-top: 10px;
-	margin-bottom: 15px;
+	/* margin-top: 10px; */
+	/* margin-bottom: 15px; */
 	align-items: center;
 }
 .stud_mid_flex{
@@ -175,10 +178,11 @@ button::-moz-focus-inner {padding:0;border:0;}
 	background-color: #292929;
 	color: #fff;
 	width: 500px;
-	margin-right: 10px;
 	border-radius: 2px;
 	font-size: 18px;
 	border: 1px #aeaeae solid;
+	margin-top: 15px;
+	margin-bottom: 18px;
 }
 .searching_div:focus{
 	outline: none;
