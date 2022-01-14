@@ -8,6 +8,7 @@ function Modal({ active, setActive, create }) {
   const [subject, setSubject] = React.useState("");
   const [number, setNumber] = React.useState("");
   const [year, setYear] = React.useState("");
+  const [selectedSubj, setSelectedSubj] = React.useState()
 
   const addNewPost = (e) => {
     e.preventDefault();
@@ -19,6 +20,7 @@ function Modal({ active, setActive, create }) {
       subject,
       number,
       year,
+      selectedSubj,
     };
     create(newPost);
     setName('')
@@ -77,6 +79,20 @@ function Modal({ active, setActive, create }) {
           placeholder="year"
         />
         <br />
+        <select  
+            value={selectedSubj}
+            onChange={(e) => setSelectedSubj(e.target.value)}
+        >
+          <option></option>
+          <option>English</option>
+          <option>Русский</option>
+          <option>Korean</option>
+          <option>Japan</option>
+          <option>Chinas</option>
+          <option>Math</option>
+          <option>Chemistry</option>
+          <option>Bilology</option>
+        </select>
         <button onClick={addNewPost}>add</button>
       </div>
     </div>

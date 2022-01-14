@@ -7,7 +7,6 @@ import { Route, Routes } from "react-router-dom";
 import Staff from "./Staff/Staff";
 import Students from "./Students/Students";
 import Settings from "./Settings/Settings";
-import AddStudents from "./Students/AddStudents";
 import Home from "./Home/Home";
 
 const Main = () => {
@@ -23,8 +22,8 @@ const Main = () => {
             <Route path="/contacts" element={<Staff />} />
             <Route path="/students" element={<Students />} />
             <Route path="/settings" element={<Settings />} />
-            <Route path="/students/add_students" element={<AddStudents />} />
           </Routes>
+          <div></div>
         </div>
       </div>
     </div>

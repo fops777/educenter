@@ -1,7 +1,73 @@
 import React, { useState } from "react";
-import { Data } from "../../Data";
+
 
 const TeacherList = () => {
+  const [data, setData] = useState([
+    {
+        subject: 'Английский',
+        teachers: {
+            tutor_1: 'Нурсултан Абубакирович',
+            tutor_2: 'Алексанра Волкина',
+            tutor_3: 'Дмитрий Гордей'
+        }
+    },
+    {
+        subject: 'Русский',
+        teachers: {
+            tutor_1: 'Нурсултан Абубакирович',
+            tutor_2: 'Алексанра Волкина',
+            tutor_3: 'Дмитрий Гордей'
+        }
+    },
+    {
+        subject: 'Корейский',
+        teachers: {
+            tutor_1: 'Нурсултан Абубакирович',
+            tutor_2: 'Алексанра Волкина',
+            tutor_3: 'Дмитрий Гордей'
+        }
+    },
+    {
+        subject: 'Японский',
+        teachers: {
+            tutor_1: 'Нурсултан Абубакирович',
+            tutor_2: 'Алексанра Волкина',
+            tutor_3: 'Дмитрий Гордей'
+        }
+    },
+    {
+        subject: 'Китайский',
+        teachers: {
+            tutor_1: 'Нурсултан Абубакирович',
+            tutor_2: 'Алексанра Волкина',
+            tutor_3: 'Дмитрий Гордей'
+        }
+    },
+    {
+        subject: 'Математика',
+        teachers: {
+            tutor_1: 'Нурсултан Абубакирович',
+            tutor_2: 'Алексанра Волкина',
+            tutor_3: 'Дмитрий Гордей'
+        }
+    },
+    {
+        subject: 'Химия',
+        teachers: {
+            tutor_1: 'Нурсултан Абубакирович',
+            tutor_2: 'Алексанра Волкина',
+            tutor_3: 'Дмитрий Гордей'
+        }
+    },
+    {
+        subject: 'Биология',
+        teachers: {
+            tutor_1: 'Нурсултан Абубакирович',
+            tutor_2: 'Алексанра Волкина',
+            tutor_3: 'Дмитрий Гордей'
+        }
+        }
+])
   const [click, setClick] = useState(true);
   const handleClick = (index) => {
     if (click === index) {
@@ -12,7 +78,7 @@ const TeacherList = () => {
   return (
     <div className="groups_flex">
       <ul className="projects_div">
-        {Data.map((item, index) => {
+        {data.map((item, index) => {
           return (
             <div>
               <div
@@ -22,7 +88,7 @@ const TeacherList = () => {
               >
                 {item.subject}
               </div>
-              {click === index ? (
+              {/* {click === index ? (
                 <ul className="viezj_spisok">
                   <a href="">
                     <div className="viezj_odin_uchit">
@@ -40,7 +106,7 @@ const TeacherList = () => {
                     </div>
                   </a>
                 </ul>
-              ) : null}
+              ) : null} */}
             </div>
           );
         })}

@@ -32,10 +32,13 @@
   padding-top: 15px;
   padding-right: 20px;
   padding-left: 20px;
-  margin-top: 20px;
+  margin-top: 0px;
   border-radius: 15px;
   height: 430px;
   width: 400px;
+}
+.students_list_block h1{
+  text-align: center;
 }
 .studList_flex {
   display: flex;
@@ -144,17 +147,16 @@
   color: red;
 }
 .searching_div{
-  padding: 8px 15px;
-	background-color: #292929;
+  padding: 3px 5px;
+	background-color: transparent;
 	color: #fff;
-	width: 400px;
-	border-radius: 2px;
+  margin: 5px 5px 0px 20px;
+	width: 390px;
+  outline: none;
+  border: none;
 	font-size: 18px;
-	border: 1px #aeaeae solid;
-	margin-top: 15px;
-	margin-bottom: 18px;
+	border-bottom: 1px #aeaeae solid;
 }
 .searching_div:focus{
 	outline: none;
-	box-shadow: #37c4e2 0px 0px 5px 1px;
 }
