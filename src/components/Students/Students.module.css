@@ -160,3 +160,49 @@
 .searching_div:focus{
 	outline: none;
 }
+
+
+/* ----------------------------------------------------- */
+.modal {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: 0.2s;
+}
+.modal.active {
+  pointer-events: all;
+  opacity: 1;
+}
+.modal_content {
+  color: white;
+  padding: 45px;
+  border-radius: 16px;
+  margin: 0 auto;
+  background-color: grey;
+  font-size: 20px;
+  text-align: center;
+}
+.modal_content input {
+  margin: 10px;
+  padding: 5px;
+  font-size: 20px;
+}
+.modal_content button {
+  margin: 10px;
+  padding: 5px 15px;
+  font-size: 20px;
+}
+.delete_btn{
+  background-color: firebrick;
+  color: white
+}
+.delete_btn:hover{
+  background-color: maroon;
+}

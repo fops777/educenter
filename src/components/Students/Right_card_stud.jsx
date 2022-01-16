@@ -1,10 +1,15 @@
 import React from "react";
 import s from "./Students.module.css";
+import DelModal from "./DelModal";
 
 function Right_card_stud({ pers, curr_pers_to_del }) {
+  const [modalActive, setModalActive] = React.useState(false);//hide/show del окно
+
   const handleClick = (clicked_person) => {
     curr_pers_to_del(clicked_person); // для передачи текущего человека в верх по DOM
+    setModalActive(false);
   };
+
   return (
     <div className={s.card}>
       <div className={s.card_title_right}>Personal info</div>
@@ -26,9 +31,8 @@ function Right_card_stud({ pers, curr_pers_to_del }) {
         <li className={s.card_bot_info}>Subject: {pers.subject}</li>
         <li className={s.card_bot_info}>number: {pers.number}</li>
         <li className={s.card_bot_info}>year: {pers.year}</li>
-        <button onClick={() => handleClick(pers)} className={s.del_button}>
-          delete &#10006;
-        </button>
+        <button className={s.del_button} onClick={() => {setModalActive(true)}}>delete &#10006;</button>
+        <DelModal deleteHandler={() => handleClick(pers)} active={modalActive} setActive={setModalActive}/>
       </div>
     </div>
   );

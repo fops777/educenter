@@ -601,7 +601,7 @@ const Students = () => {
         >
           Добавить ученика +
         </button>
-        <Modal //Modal
+        <Modal //Modalо
           active={modalActive}
           setActive={setModalActive}
           create={createPost}
