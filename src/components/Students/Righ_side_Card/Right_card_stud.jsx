@@ -1,5 +1,5 @@
 import React from "react";
-import s from "./Students.module.css";
+import s from "../Students.module.css";
 import DelModal from "./DelModal";
 
 function Right_card_stud({ pers, curr_pers_to_del }) {
@@ -32,7 +32,7 @@ function Right_card_stud({ pers, curr_pers_to_del }) {
         <li className={s.card_bot_info}>number: {pers.number}</li>
         <li className={s.card_bot_info}>year: {pers.year}</li>
         <button className={s.del_button} onClick={() => {setModalActive(true)}}>delete &#10006;</button>
-        <DelModal deleteHandler={() => handleClick(pers)} active={modalActive} setActive={setModalActive}/>
+        <DelModal pers={pers} deleteHandler={() => handleClick(pers)} active={modalActive} setActive={setModalActive}/>
       </div>
     </div>
   );

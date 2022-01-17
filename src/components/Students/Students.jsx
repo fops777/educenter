@@ -1,10 +1,9 @@
 import React from "react";
-import Modal from "./Modal/Modal";
 import StudentsList from "./StudentsList";
-import Right_card_stud from "./Right_card_stud";
+import CreatingStud from "./AddStudent/CreatingStud";
+import Right_card_stud from './Righ_side_Card/Right_card_stud';
 
 const Students = () => {
-  const [modalActive, setModalActive] = React.useState(false); //показ/скрыть modal окно
   const [one_pers, setOne_pers] = React.useState([]); // Person которого передаем в <Right_card />
   const [allTodos, setAllTodos] = React.useState([]);  //Current Students List(в середине)
   const [glSearchInp, setGlSearchInp] = React.useState('') // input global search
@@ -572,20 +571,6 @@ const Students = () => {
   return (
     <div className="students_content">
       <div className="stud_top_flex">
-
-      {/* {globalTodos
-          .filter((val) => {
-              if (
-                val.name.toLowerCase().includes(glSearchInp.toLowerCase()) ||
-                val.surName.toLowerCase().includes(glSearchInp.toLowerCase()) ||
-                val.thirdName.toLowerCase().includes(glSearchInp.toLowerCase()) ||
-                val.subject.toLowerCase().includes(glSearchInp.toLowerCase())
-              ) {
-                return val;
-            }
-      })} */}
-
-
         <input //Global Search
           value={glSearchInp}  
           placeholder="global search"  
@@ -593,19 +578,7 @@ const Students = () => {
           setGlSearchInp(e.target.value);
           }}
         />
-        <button //Добавить ученика+
-          onClick={() => {
-            setModalActive(true);
-          }}
-          className="add_student_button"
-        >
-          Добавить ученика +
-        </button>
-        <Modal //Modalо
-          active={modalActive}
-          setActive={setModalActive}
-          create={createPost}
-        />
+          <CreatingStud createPost={createPost}/>
       </div>
       <div className="stud_mid_flex">
         <div className="projects_div">
@@ -619,7 +592,7 @@ const Students = () => {
           <button className="project" onClick={() => setAllTodos([...todosBio])}>Биология</button>
         </div>
         
-        <StudentsList
+        <StudentsList //middle side
           todos={
             allTodos
             // globalTodos
