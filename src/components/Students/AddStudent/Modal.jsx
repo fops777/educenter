@@ -91,7 +91,7 @@ function Modal({ active, setActive, create }) {
           <option>Chinas</option>
           <option>Math</option>
           <option>Chemistry</option>
-          <option>Bilology</option>
+          <option>Biology</option>
         </select>
         <button onClick={addNewPost}>add</button>
       </div>

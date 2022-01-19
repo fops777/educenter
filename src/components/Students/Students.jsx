@@ -2,11 +2,12 @@ import React from "react";
 import StudentsList from "./StudentsList";
 import CreatingStud from "./AddStudent/CreatingStud";
 import Right_card_stud from './Righ_side_Card/Right_card_stud';
+import s from './Students.module.css'
 
 const Students = () => {
   const [one_pers, setOne_pers] = React.useState([]); // Person которого передаем в <Right_card />
   const [allTodos, setAllTodos] = React.useState([]);  //Current Students List(в середине)
-  const [glSearchInp, setGlSearchInp] = React.useState('') // input global search
+  const [showAllStud, setShowAllStud] = React.useState(false) // show/hide list of all students
   const [globalTodos, setGlobalTodos] = React.useState([
     {
       id: '213',
@@ -532,6 +533,7 @@ const Students = () => {
 
   //CREATING TODOS
   const createPost = (newPost) => {
+    setGlobalTodos([...globalTodos, newPost]) //Добавление в общий лист всех учеников
     if (newPost.selectedSubj === "English") {
       setTodosEng([...todosEng, newPost]);
     }
@@ -565,40 +567,76 @@ const Students = () => {
 
   //DELETING TODOS
   const del_pers = (todo) => {
-    setAllTodos(allTodos.filter((el) => el.id !== todo.id));
+    setAllTodos(allTodos.filter((el) => el.id !== todo.id)); //deleting from group shedule
+    setGlobalTodos(globalTodos.filter((el) => el.id !== todo.id)); //deleting from all students schedule
   };
+
+  const eng = () => {
+    setAllTodos([...todosEng])
+    setShowAllStud(false)
+  }
+  const rus = () => {
+    setAllTodos([...todosRus])
+    setShowAllStud(false)
+  }
+  const kor = () => {
+    setAllTodos([...todosKor])
+    setShowAllStud(false)
+  }
+  const jap = () => {
+    setAllTodos([...todosJap])
+    setShowAllStud(false)
+  }
+  const chin = () => {
+    setAllTodos([...todosChin])
+    setShowAllStud(false)
+  }
+  const math = () => {
+    setAllTodos([...todosMath])
+    setShowAllStud(false)
+  }
+  const chem = () => {
+    setAllTodos([...todosChem])
+    setShowAllStud(false)
+  }
+  const bio = () => {
+    setAllTodos([...todosBio])
+    setShowAllStud(false)
+  }
 
   return (
     <div className="students_content">
       <div className="stud_top_flex">
-        <input //Global Search
-          value={glSearchInp}  
-          placeholder="global search"  
-          onChange={(e) => {
-          setGlSearchInp(e.target.value);
-          }}
-        />
+        
+        <button //to toggle all students
+          className={!showAllStud ? s.stud_toggle_button : s.stud_toggle_button_off}
+          onClick={() => setShowAllStud(!showAllStud)}>
+          show all students
+        </button>
+
           <CreatingStud createPost={createPost}/>
       </div>
       <div className="stud_mid_flex">
         <div className="projects_div">
-          <button className="project" onClick={() => setAllTodos([...todosEng])}>Английский</button>
-          <button className="project" onClick={() => setAllTodos([...todosRus])}>Русский</button>
-          <button className="project" onClick={() => setAllTodos([...todosKor])}>Корейский</button>
-          <button className="project" onClick={() => setAllTodos([...todosJap])}>Японский</button>
-          <button className="project" onClick={() => setAllTodos([...todosChin])}>Китайский</button>
-          <button className="project" onClick={() => setAllTodos([...todosMath])}>Математика</button>
-          <button className="project" onClick={() => setAllTodos([...todosChem])}>Химия</button>
-          <button className="project" onClick={() => setAllTodos([...todosBio])}>Биология</button>
+          <button className="project" onClick={eng}>Английский</button>
+          <button className="project" onClick={rus}>Русский</button>
+          <button className="project" onClick={kor}>Корейский</button>
+          <button className="project" onClick={jap}>Японский</button>
+          <button className="project" onClick={chin}>Китайский</button>
+          <button className="project" onClick={math}>Математика</button>
+          <button className="project" onClick={chem}>Химия</button>
+          <button className="project" onClick={bio}>Биология</button>
         </div>
-        
-        <StudentsList //middle side
-          todos={
-            allTodos
-            // globalTodos
-          }
+        {console.log(showAllStud)}
+
+        {!showAllStud ? 
+          <StudentsList todos={allTodos}
           current_person={current_person_func}// to send in right side
-        />
+        /> :
+          <StudentsList todos={globalTodos}
+          current_person={current_person_func}// to send in right side
+        />}    
+
         <Right_card_stud
           pers={one_pers}
           curr_pers_to_del={del_pers}

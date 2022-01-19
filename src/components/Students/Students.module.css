@@ -206,3 +206,26 @@
 .delete_btn:hover{
   background-color: maroon;
 }
+
+.stud_toggle_button{
+  color: white;
+  font-size: 20px;
+  padding: 5px 10px;
+  border: 1px solid grey;
+  opacity: 0.7;
+  background-color: transparent;
+  border-radius: 5px;
+}
+.stud_toggle_button:hover{
+  opacity: 1;
+}
+.stud_toggle_button_off{
+  color: white;
+  font-size: 20px;
+  padding: 5px 10px;
+  border: 1px solid cyan;
+  box-shadow: 0px 0px 5px 0px cyan;
+  opacity: 1;
+  background-color: transparent;
+  border-radius: 5px;
+}
