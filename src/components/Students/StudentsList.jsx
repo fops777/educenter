@@ -46,7 +46,9 @@ function StudentsList({ todos, current_person }) {
                   <div className={s.subject}>{todo.subject}</div>
                   <div className={s.number}>{todo.number}</div>
                   <div className={s.birth}>{todo.year}</div>
+                  <div className={s.birth}>{todo.today}</div>
                 </div>
+{                console.log('today in stud list', todo.today)}
 
                 <img className={s.photo} alt="" />
               </div>

@@ -9,6 +9,14 @@ function Modal({ active, setActive, create }) {
   const [number, setNumber] = React.useState("");
   const [year, setYear] = React.useState("");
   const [selectedSubj, setSelectedSubj] = React.useState()
+  
+  let today = new Date();
+  let dd = String(today.getDate()).padStart(2, '0');
+  let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+  let yyyy = today.getFullYear();
+  
+  today = mm + '/' + dd + '/' + yyyy;
+  // console.log(today);
 
   const addNewPost = (e) => {
     e.preventDefault();
@@ -21,6 +29,7 @@ function Modal({ active, setActive, create }) {
       number,
       year,
       selectedSubj,
+      today,
     };
     create(newPost);
     setName('')

@@ -3,6 +3,7 @@ import Modal from './Modal'
 
 function CreatingStud({createPost}) {
   const [modalActive, setModalActive] = React.useState(false); //показ/скрыть modal окно
+
     return (
         <div>
         <button //Добавить ученика+

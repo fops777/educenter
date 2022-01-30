@@ -603,7 +603,6 @@ const Students = () => {
     setAllTodos([...todosBio])
     setShowAllStud(false)
   }
-
   return (
     <div className="students_content">
       <div className="stud_top_flex">
@@ -639,6 +638,7 @@ const Students = () => {
 
         <Right_card_stud
           pers={one_pers}
+          setPers={setOne_pers}
           curr_pers_to_del={del_pers}
         />
       </div>

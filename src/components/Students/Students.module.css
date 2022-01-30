@@ -104,13 +104,11 @@
 }
 
 .card {
-  padding: 25px 20px;
   background-color: #3e3f43;
   border-radius: 20px;
   border: 2px solid grey;
   margin-top: 30px;
   width: 300px;
-  height: 350px
 }
 
 .top_card_flex {
@@ -138,6 +136,14 @@
   color: white;
   margin-top: 10px;
 }
+.card_bot_info_date{
+  font-size: 15px;
+}
+.card_bottom_flex{
+  display: flex;
+  justify-content:space-between;
+  margin-top: 30px;
+}
 .del_button {
   background-color: transparent;
   color: brown;
@@ -145,6 +151,16 @@
 }
 .del_button:hover {
   color: red;
+}
+.edit_button {
+  background-color: transparent;
+  color:chocolate;
+  float: right;
+}
+.edit_button:hover {
+  background-color: transparent;
+  color:coral;
+  float: right;
 }
 .searching_div{
   padding: 3px 5px;
