@@ -1,5 +1,5 @@
-import React from "react";
 import "../App.css";
+import React from "react";
 import Navbar from "./Navbar/Navbar";
 import Header from "./Header/Header";
 import Payment from "./Payment/Payment";
